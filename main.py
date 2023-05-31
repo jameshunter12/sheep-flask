@@ -10,8 +10,6 @@ from sheep_api.model.username import init_users
 app.register_blueprint(player_bp)
 app.register_blueprint(user_bp)
 
-
-@app.before_first_request
 def init_db():
     with app.app_context():
         db.create_all()
